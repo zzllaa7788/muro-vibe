@@ -1,0 +1,61 @@
+# Netlify 배포 설정 - 멍멍! 물어봐이브 🐕
+
+[build]
+  # 빌드 명령어
+  command = "npm run build"
+  # 빌드 결과물 디렉토리
+  publish = "dist"
+  
+[build.environment]
+  # Node.js 버전
+  NODE_VERSION = "18"
+
+# SPA (Single Page Application) 라우팅 설정
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# API 프록시 설정 (필요시)
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://generativelanguage.googleapis.com/:splat"
+#   status = 200
+#   force = true
+
+# 헤더 설정
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # 보안 헤더
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # 캐시 설정
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # 정적 파일 캐시 (1년)
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "text/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+
+# 404 페이지 설정
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
+
+# robots.txt와 sitemap.xml은 자동으로 서빙됨
+

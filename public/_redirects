@@ -1,0 +1,5 @@
+# Netlify Redirects - SPA 라우팅
+# 모든 경로를 index.html로 리다이렉트 (React Router 지원)
+
+/*    /index.html   200
+

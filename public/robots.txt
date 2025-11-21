@@ -1,0 +1,12 @@
+# 물어봐이브 - Robots.txt
+# 귀여운 강아지 AI가 답변해드려요! 🐕
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://muro-vibe.com/sitemap.xml
+
+# 크롤링 속도 제한
+Crawl-delay: 1
+

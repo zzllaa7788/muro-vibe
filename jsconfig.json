@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["src/shared/ui/*"],
+      "@ui": ["src/shared/ui"],
+      "@pages/*": ["src/pages/*"],
+      "@pages": ["src/pages"],
+      "@features/*": ["src/features/*"],
+      "@features": ["src/features"],
+      "@widgets/*": ["src/widgets/*"],
+      "@widgets": ["src/widgets"],
+      "@api/*": ["src/shared/api/*"],
+      "@api": ["src/shared/api"],
+      "@lib/*": ["src/shared/lib/*"],
+      "@lib": ["src/shared/lib"],
+      "@config/*": ["src/shared/config/*"],
+      "@config": ["src/shared/config"],
+      "@assets/*": ["src/assets/*"],
+      "@assets": ["src/assets"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+

@@ -1,0 +1,52 @@
+{
+  "name": "muro-vibe",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "멍멍! 귀여운 강아지 AI가 답변해드려요! 🐕 - 일상의 모든 질문을 강아지 말투로 답변하는 인터랙티브 웹 앱",
+  "keywords": [
+    "ai",
+    "chatbot",
+    "gemini",
+    "react",
+    "vite",
+    "dog",
+    "korean",
+    "lottie",
+    "물어봐이브",
+    "강아지",
+    "AI챗봇"
+  ],
+  "author": "물어봐이브",
+  "homepage": "https://muro-vibe.com",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\""
+  },
+  "dependencies": {
+    "lottie-react": "^2.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.9.6",
+    "react-syntax-highlighter": "^16.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.181.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "vite": "^7.2.2"
+  }
+}

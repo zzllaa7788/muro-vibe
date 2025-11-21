@@ -1,0 +1,177 @@
+.not-found-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.not-found-page__container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.not-found-page__icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+  animation: wiggle 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.not-found-page__title {
+  font-size: 120px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  line-height: 1;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.not-found-page__subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #495057;
+  margin: 0 0 20px 0;
+}
+
+.not-found-page__description {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.8;
+  margin: 0 0 40px 0;
+}
+
+.not-found-page__actions {
+  margin-bottom: 40px;
+}
+
+.not-found-page__help {
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.not-found-page__help p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  margin: 0 0 15px 0;
+}
+
+.not-found-page__help ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.not-found-page__help li {
+  font-size: 14px;
+  color: #6c757d;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.not-found-page__help li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.not-found-page__help li::before {
+  content: '🐾 ';
+  margin-right: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .not-found-page__container {
+    padding: 40px 30px;
+  }
+
+  .not-found-page__icon {
+    font-size: 80px;
+  }
+
+  .not-found-page__title {
+    font-size: 80px;
+  }
+
+  .not-found-page__subtitle {
+    font-size: 22px;
+  }
+
+  .not-found-page__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-page__container {
+    padding: 30px 20px;
+  }
+
+  .not-found-page__icon {
+    font-size: 60px;
+  }
+
+  .not-found-page__title {
+    font-size: 60px;
+  }
+
+  .not-found-page__subtitle {
+    font-size: 18px;
+  }
+}
+
