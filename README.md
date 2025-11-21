@@ -1,5 +1,7 @@
 # 🐕 멍멍! 물어봐이브 (Mureo-Vibe)
 
+> 🚀 **Live Demo**: [GitHub Repository](https://github.com/zzllaa7788/muro-vibe)
+
 귀여운 강아지 AI가 여러분의 모든 질문에 답해드려요! 🐾  
 일상의 사소한 고민부터 창의적인 아이디어까지, 무엇이든 물어보면 강아지 친구가 "~한다개!" 하며 재치있게 답해주는 인터랙티브 웹 앱
 
