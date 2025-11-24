@@ -61,18 +61,30 @@ src/
 npm install
 ```
 
-### 3. 환경 변수 설정
+### 3. 환경 변수 설정 ⚠️
 
-프로젝트 루트에 `.env` 파일을 생성하고 Gemini API 키를 입력하세요:
+**로컬 개발을 위한 환경 변수 설정:**
 
-```env
-VITE_GEMINI_API_KEY=your_api_key_here
-```
+1. `.env.example` 파일을 복사하여 `.env` 파일 생성:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. `.env` 파일을 열고 Gemini API 키를 입력하세요:
+   ```env
+   VITE_GEMINI_API_KEY=your_actual_api_key_here
+   ```
 
 > 💡 **Gemini API 키 발급 방법**:
-> 1. [Google AI Studio](https://makersuite.google.com/app/apikey)에 접속
-> 2. API 키 생성
-> 3. 생성된 키를 `.env` 파일에 입력
+> 1. [Google AI Studio](https://aistudio.google.com/app/apikey)에 접속
+> 2. Google 계정으로 로그인
+> 3. "Create API Key" 클릭
+> 4. 생성된 키를 `.env` 파일에 입력
+
+> 🔐 **보안 주의사항**:
+> - `.env` 파일은 절대 Git에 커밋하지 마세요! (`.gitignore`에 포함됨)
+> - API 키를 타인과 공유하지 마세요!
+> - **배포 시에는 별도로 환경 변수를 설정해야 합니다!** (아래 배포 가이드 참조)
 
 ### 4. 개발 서버 실행
 
@@ -87,6 +99,26 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 🚀 배포하기
+
+### Netlify 배포 (권장)
+
+**중요: 배포 시 환경 변수를 반드시 설정해야 합니다!**
+
+자세한 배포 가이드는 **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** 파일을 참고하세요.
+
+**간단 요약:**
+1. GitHub에 코드 푸시
+2. Netlify에서 리포지토리 연결
+3. ⚠️ **Netlify 환경 변수 설정** (필수!):
+   - Site settings → Environment variables
+   - `VITE_GEMINI_API_KEY` 추가
+4. 재배포 (Clear cache and deploy site)
+
+> 💡 환경 변수를 설정하지 않으면 "API key not valid" 에러가 발생합니다!
+
+더 자세한 내용은 [배포 가이드](./DEPLOYMENT_GUIDE.md)를 확인하세요.
 
 ## 🎯 사용 방법
 
